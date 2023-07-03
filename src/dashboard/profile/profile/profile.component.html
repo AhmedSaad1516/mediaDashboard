@@ -1,0 +1,200 @@
+<div *ngIf="img" class="preloader">
+    <div class="preloader-inner">
+    <div class="preloader-icon">
+    <span></span>
+    <span></span>
+    </div>
+    </div>
+    </div>
+<div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+
+        <div class="layout-page">
+            <div class="content-wrapper">
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Admin Profile /</span> Profile</h4>
+
+    <!-- Header -->
+    <div class="row">
+      <div class="col-12">
+        <div class="card mb-4">
+        
+          <div class="user-profile-header d-flex flex-column flex-sm-row text-sm-start text-center mb-4">
+            <div class="flex-shrink-0 mt-n2 mx-sm-0 mx-auto">
+              <img  [src]="data.photo" alt="user image" class=" myu d-block h-auto ms-0 ms-sm-4 rounded user-profile-img">
+            </div>
+            <div class="flex-grow-1 mt-3 mt-sm-5">
+              <div class="d-flex align-items-md-end align-items-sm-start align-items-center justify-content-md-between justify-content-start mx-4 flex-md-row flex-column gap-4">
+                <div class="user-profile-info">
+               
+            
+                </div>
+                <a style="color: white;" (click)="editProfile(data)" class="btn btn-primary waves-effect waves-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"></path>
+                        <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z"></path>
+                        <path d="M16 5l3 3"></path>
+                     </svg>Edit Profile
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Header -->
+
+    <!-- Navbar pills -->
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="nav nav-pills flex-column flex-sm-row mb-4">
+          <li class="nav-item">
+            <a class="nav-link active" href="javascript:void(0);"><i class="ti-xs ti ti-user-check me-1"></i> Profile</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <!--/ Navbar pills -->
+
+    <!-- User Profile Content -->
+    <div class="row">
+      <div class="col-xl-4 col-lg-5 col-md-5">
+        <!-- About User -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <small class="card-text text-uppercase">About</small>
+            <ul class="list-unstyled mb-4 mt-3">
+              <li class="d-flex align-items-center mb-3">
+                <i class="ti ti-user"></i><span class="fw-bold mx-2">Full Name:</span> <span>{{data.name}}</span>
+              </li>
+              <li _ngcontent-nlu-c90="" class="d-flex align-items-center mb-3"><i _ngcontent-nlu-c90="" class="ti ti-mail"></i><span _ngcontent-nlu-c90="" class="fw-bold mx-2">Email:</span><span _ngcontent-nlu-c90="">{{data.email}}</span></li>
+              <li class="d-flex align-items-center mb-3">
+                <i class="ti ti-crown"></i><span class="fw-bold mx-2">Role:</span> <span>{{data.type}}</span>
+              </li>
+              
+            </ul>
+       
+       
+          </div>
+        </div>
+      
+        <!--/ Profile Overview -->
+      </div>
+      <div class="col-xl-8 col-lg-7 col-md-7">
+        <!-- Activity Timeline -->
+        <div class="card card-action mb-4">
+          <div class="card-header align-items-center">
+            <h5 class="card-action-title mb-0">Change Password</h5>
+            <div class="card-action-element">
+              <div class="dropdown">
+                <button type="button" class="btn dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="ti ti-dots-vertical text-muted"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="javascript:void(0);">Share timeline</a></li>
+                  <li><a class="dropdown-item" href="javascript:void(0);">Suggest edits</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="javascript:void(0);">Report bug</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-body pb-0">
+            <ul [formGroup]="changePasswordForm" class="timeline ms-1 mb-0">
+              <li class="timeline-item timeline-item-transparent">
+                <span class="timeline-point timeline-point-danger"></span>
+                <div class="timeline-event">
+               
+                 
+                  <div class="d-flex flex-wrap">
+                    <div class="avatar me-2">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="basic-icon-default-phone">Old Password</label>
+                        <div class="input-group input-group-merge">
+                          <span id="basic-icon-default-phone2" class="input-group-text">
+                            <span _ngcontent-ghj-c89="" id="basic-icon-default-phone2" class="input-group-text"><svg _ngcontent-ghj-c89="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-lock"><path _ngcontent-ghj-c89="" stroke="none" d="M0 0h24v24H0z" fill="none"></path><path _ngcontent-ghj-c89="" d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"></path><path _ngcontent-ghj-c89="" d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path><path _ngcontent-ghj-c89="" d="M8 11v-4a4 4 0 1 1 8 0v4"></path></svg></span>
+                          
+                          </span>
+                          <input formControlName="current_password"  [type]="changetype?'password':'text'" type="password" id="basic-icon-default-phone" class="form-control phone-mask" placeholder="*******" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2">
+                          <span (click)="viewpass()" class="input-group-text cursor-pointer"><i style="font-size: 17px;"[ngClass]="visible?'ti ti-eye-off':'ti ti-eye'"></i></span>                        </div>
+                          <small class="text-danger" *ngIf="changePasswordForm.get('current_password')?.touched && changePasswordForm.get('current_password')?.invalid"> The Passeord Is Required !</small>
+
+                        </div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item timeline-item-transparent">
+                <span class="timeline-point timeline-point-warning"></span>
+                <div class="timeline-event">
+               
+                 
+                  <div class="d-flex flex-wrap">
+                    <div class="avatar me-2">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="basic-icon-default-phone">New Password</label>
+                        <div class="input-group input-group-merge">
+                          <span id="basic-icon-default-phone2" class="input-group-text">
+                            
+                            <span _ngcontent-ghj-c89="" id="basic-icon-default-phone2" class="input-group-text"><svg _ngcontent-ghj-c89="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-lock"><path _ngcontent-ghj-c89="" stroke="none" d="M0 0h24v24H0z" fill="none"></path><path _ngcontent-ghj-c89="" d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"></path><path _ngcontent-ghj-c89="" d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path><path _ngcontent-ghj-c89="" d="M8 11v-4a4 4 0 1 1 8 0v4"></path></svg></span>                          </span>
+                          <input formControlName="new_password"  [type]="changetypee?'password':'text'" type="password" id="basic-icon-default-phone" class="form-control phone-mask" placeholder="*******" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2">
+                          <span (click)="viewpasss()" class="input-group-text cursor-pointer"><i style="font-size: 17px;"[ngClass]="visiblee?'ti ti-eye-off':'ti ti-eye'"></i></span> </div>
+                          <small class="text-danger" *ngIf="changePasswordForm.get('new_password')?.touched && changePasswordForm.get('new_password')?.invalid"> The Passeord Is Required !</small>
+                      
+                        
+                       
+                      </div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item timeline-item-transparent">
+                <span class="timeline-point timeline-point-success"></span>
+                <div class="timeline-event">
+               
+                 
+                  <div class="d-flex flex-wrap">
+                    <div class="avatar me-2">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="basic-icon-default-phone">New Password Confirmation</label>
+                        <div class="input-group input-group-merge">
+                          <span id="basic-icon-default-phone2" class="input-group-text">
+                            <span _ngcontent-ghj-c89="" id="basic-icon-default-phone2" class="input-group-text"><svg _ngcontent-ghj-c89="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-lock"><path _ngcontent-ghj-c89="" stroke="none" d="M0 0h24v24H0z" fill="none"></path><path _ngcontent-ghj-c89="" d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"></path><path _ngcontent-ghj-c89="" d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path><path _ngcontent-ghj-c89="" d="M8 11v-4a4 4 0 1 1 8 0v4"></path></svg></span>                          </span>
+                          <input formControlName="new_password_confirmation"  [type]="changetypeee?'password':'text'" type="password" id="basic-icon-default-phone" class="form-control phone-mask" placeholder="*******" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2">
+                          <span (click)="viewpassss()" class="input-group-text cursor-pointer"><i style="font-size: 17px;"[ngClass]="visibleee?'ti ti-eye-off':'ti ti-eye'"></i></span>                        </div>
+                            <small class="text-danger" *ngIf="changePasswordForm.get('new_password_confirmation')?.touched && changePasswordForm.get('new_password_confirmation')?.invalid"> The Passeord Is Required !</small>
+                      
+                        </div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-item timeline-item-transparent border-0">
+                <span class="timeline-point timeline-point-primary"></span>
+                <div class="timeline-event">
+                  <div class="timeline-header">
+                    <button (click)="updatePasweord()" [disabled]="this.changePasswordForm.invalid || (this.changePasswordForm.value.new_password)!==(this.changePasswordForm.value.new_password_confirmation)" style="color: white;"  class="btn btn-primary waves-effect waves-light">
+                        <i class="ti ti-user-check me-1"></i>Save 
+                      </button>
+                   
+                  </div>
+                
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+     
+        <!--/ Projects table -->
+      </div>
+    </div>
+    <!--/ User Profile Content -->
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

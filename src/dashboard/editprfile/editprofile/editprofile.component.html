@@ -1,0 +1,46 @@
+<div *ngIf="img" class="preloader">
+    <div class="preloader-inner">
+    <div class="preloader-icon">
+    <span></span>
+    <span></span>
+    </div>
+    </div>
+    </div>
+<div class="col-md-12">
+    <div style="    height: 449px;" class="card mb-4">
+   
+      <h5 *ngIf="data"  class="card-header">Update  Profile</h5>
+      <div *ngIf="showError" class="alert alert-danger d-flex align-items-center" role="alert">
+        <span class="alert-icon text-danger me-2">
+          <i class="ti ti-ban ti-xs"></i>
+        </span>
+        This Name Unique!
+      </div>
+      <div [formGroup]="formEdit" class="card-body">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Name</label>
+          <input formControlName="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Add Name...">
+        </div>
+        <div class="mb-3">
+            <label  *ngIf="data" for="selected" type="button" class="btn btn-primaryl" > Change Photo</label>
+
+            <div  role="alert" >
+                <div>
+                 <p>{{url? photoName:formEdit.value.photo}}</p>                        
+                </div>
+                <img class="myu" [src]="url? url:formEdit.value.photo" alt="">
+              </div>
+                        <input type="file" (change)="selectPhoto($event)" id="selected" hidden class="form-control">
+
+            </div>
+
+            <div class="col-sm-12">
+       
+                    <button (click)="updateDataProfile()" type="submit"
+                    class="btn btn-primary waves-effect waves-light">Update</button>
+                <button style="    margin-left: 12px; " (click)="close()" type="reset" class="btn btn-outline-secondary waves-effect"
+                    >Cancel</button>
+            </div>
+      </div>
+    </div>
+  </div>

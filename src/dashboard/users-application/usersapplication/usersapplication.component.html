@@ -1,0 +1,108 @@
+<div *ngIf="img" class="preloader">
+    <div class="preloader-inner">
+    <div class="preloader-icon">
+    <span></span>
+    <span></span>
+    </div>
+    </div>
+    </div>
+<div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+
+        <div class="layout-page">
+            <div class="content-wrapper">
+                <div class="container-xxl flex-grow-1 container-p-y">
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-datatable table-responsive pt-0">
+                                <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                                    <div class="card-header flex-column flex-md-row">
+                                        <div class="head-label text-center">
+                                            <h5 class="card-title mb-0">Show Data</h5>
+                                        </div>
+                                  
+                                    </div>
+                                    <div class="row">
+                                        <!-- <div class="col-sm-12 col-md-6">
+                                            <div class="dataTables_length" id="DataTables_Table_0_length"><label>Show
+                                                    <select name="DataTables_Table_0_length"
+                                                        aria-controls="DataTables_Table_0" class="form-select">
+                                                        <option value="7">7</option>
+                                                        <option value="10">10</option>
+                                                        <option value="25">25</option>
+                                                        <option value="50">50</option>
+                                                        <option value="75">75</option>
+                                                        <option value="100">100</option>
+                                                    </select> entries</label></div>
+                                        </div> -->
+                                        <!-- <div
+                                            class="col-sm-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+                                            <div id="DataTables_Table_0_filter" class="dataTables_filter">
+                                                <label>Search:<input type="search" class="form-control" placeholder=""
+                                                        aria-controls="DataTables_Table_0"></label></div>
+                                        </div> -->
+                                    </div>
+                                    <table   id="example"     datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"   class="datatables-basic table dataTable no-footer dtr-column"
+                                      
+                                        style="width: 1216px;">
+                                        <thead style="    border-bottom: 1px solid #dbdade;">
+                                            <tr>
+                                          
+                                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                rowspan="1" colspan="1" style="width: 119px;"
+                                                aria-label="Name: activate to sort column ascending">Id</th>
+                                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                    rowspan="1" colspan="1" style="width: 119px;"
+                                                    aria-label="Name: activate to sort column ascending">Name</th>
+
+
+                                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                    rowspan="1" colspan="1" style="width: 123px;"
+                                                    aria-label="Email: activate to sort column ascending">Email</th>
+                                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                    rowspan="1" colspan="1" style="width: 107px;"
+                                                    aria-label="Date: activate to sort column ascending">Country </th>
+     
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 151px;" aria-label="Actions">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of users ;let index=index" class="odd">
+                                                <td >{{item.id}}</td>
+                                            <td>{{item.name}}</td>
+                                          
+                                        <td>
+                                            {{item.email}}
+                                        </td>
+                                        <td>
+                                            {{item.country}}
+                                        </td>
+
+                                        <td>
+                                                  <button style=" margin-left: 5px;
+                                                  font-size: 11px;
+                                                  width: 131px;
+                                                  height: 36px; " routerLink="/detalis-users/{{item.id}}" type="button" class="btn btn-success waves-effect waves-light">Show Detalis User</button>
+
+                                        </td>
+                                           <!-- <td>
+                                            <button style=" margin-top: 22px;  " (click)="updateinterestss(item)" type="button" class="btn btn-success waves-effect waves-light">Updae</button>
+
+                                           </td> -->
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

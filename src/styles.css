@@ -1,0 +1,198 @@
+/* You can add global styles to this file, and also import other style files */
+/* "src/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css",
+"src/assets/vendor/libs/node-waves/node-waves.css",
+"src/assets/vendor/libs/typeahead-js/typeahead.css",
+"src/assets/vendor/libs/formvalidation/dist/css/formValidation.min.css",
+"src/assets/vendor/css/pages/page-auth.css", */
+
+/* 
+ "src/assets/vendor/libs/jquery/jquery.js",
+              "src/assets/vendor/js/bootstrap.js",
+              "src/assets/vendor/libs/hammer/hammer.js",
+              "src/assets/vendor/libs/typeahead-js/typeahead.js",
+              "src/assets/vendor/js/menu.js",
+              "src/assets/js/main.js",
+              "src/assets/js/ui-modals.js"
+*/
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  color: white !important;
+  border: none;
+  
+  background: none !important;
+}
+
+h5{
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.37;
+  color: #5d596c;
+  font-size: 1.125rem;
+}
+.myu{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0px;
+  width: 150px;
+}
+.myu:hover{
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  
+}
+.scrollarea{
+  min-height:none;
+    /* width: 4px; */
+    min-width: 1px;
+
+}
+::-webkit-scrollbar {
+  background-color:#5D596C33;
+  width: 1px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background:#5D596C33;
+  width: 1px;
+}
+
+::-webkit-scrollbar-corner {
+  background:#5D596C33;
+  width: 1px;
+}
+
+::-webkit-scrollbar-button:single-button {
+    background-color:#5D596C33;
+    width: 1px;
+}
+
+.modal-backdrop.show {
+    opacity: 0 !important;
+}
+.table th {
+    text-transform: math-auto !important;
+}
+/* Preloader */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+.preloader-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.preloader-icon {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  padding: 0;
+}
+.preloader-icon span {
+  position: absolute;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background: #7166F0;
+  -webkit-animation: preloader-fx 1.6s linear infinite;
+  animation: preloader-fx 1.6s linear infinite;
+}
+.preloader-icon span:last-child {
+  animation-delay: -0.8s;
+  -webkit-animation-delay: -0.8s;
+}
+@keyframes preloader-fx {
+  0% {
+      -webkit-transform: scale(0, 0);
+      transform: scale(0, 0);
+      opacity: 0.5;
+  }
+  100% {
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+      opacity: 0;
+  }
+}
+@-webkit-keyframes preloader-fx {
+  0% {
+      -webkit-transform: scale(0, 0);
+      opacity: 0.5;
+  }
+  100% {
+      -webkit-transform: scale(1, 1);
+      opacity: 0;
+  }
+}
+
+.mat-mdc-text-field-wrapper {
+  width: 100% !important;
+  height: 39px !important;
+  margin-top: 250px !important;
+}
+
+html:not([dir=rtl]) .text-center {
+  text-align: inherit !important; 
+}
+.mat-mdc-form-field-flex {
+  display: inline-flex;
+  align-items: baseline;
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px !important;
+}
+
+
+
+
+
+
+.toast-container {
+  --bs-toast-zindex: 1074;
+}
+.toast-container {
+  --bs-toast-zindex: 1095;
+  position: absolute;
+  z-index: var(--bs-toast-zindex);
+  width: max-content;
+  max-width: 100%;
+  pointer-events: none;
+}
+
+.toast-container {
+  pointer-events: none;
+  position: fixed;
+  z-index: 999999;
+}
+.toast-top-right {
+  /* top: 12px; */
+
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.55rem 1.25rem;
+  background-color: var(--bs-table-bg);
+  border-bottom-width: 1px;
+  box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+  width: 10px;
+}
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  border-radius: var(--mdc-dialog-container-shape, var(--mdc-shape-medium, 4px));
+  margin-top: 93px;
+}
+
+table.dataTable.no-footer {
+  border-bottom:white !important;
+}

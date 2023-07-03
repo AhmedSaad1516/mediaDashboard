@@ -1,0 +1,81 @@
+<div *ngIf="img" class="preloader">
+  <div class="preloader-inner">
+  <div class="preloader-icon">
+  <span></span>
+  <span></span>
+  </div>
+  </div>
+  </div>
+<div class="col-md-12">
+    <div style="    height: 449px;" class="card mb-4">
+      <h5 *ngIf="!data" class="card-header">Add New Announcement</h5>
+      <h5 *ngIf="data"  class="card-header">Update  Announcement</h5>
+      <div *ngIf="showError" class="alert alert-danger d-flex align-items-center" role="alert">
+        <span class="alert-icon text-danger me-2">
+          <i class="ti ti-ban ti-xs"></i>
+        </span>
+        This Name Unique!
+      </div>
+      <div [formGroup]="formUser" class="card-body">
+        <div class="mb-3">
+            <label class="form-label" for="basic-icon-default-fullname">Full Name</label>
+            <div class="input-group input-group-merge">
+              <span id="basic-icon-default-fullname2" class="input-group-text"><i class="ti ti-user"></i></span>
+              <input formControlName="name" type="text" class="form-control" id="basic-icon-default-fullname" placeholder="John Doe" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="basic-icon-default-email">Email</label>
+            <div class="input-group input-group-merge">
+              <span class="input-group-text"><i class="ti ti-mail"></i></span>
+              <input formControlName="email"  type="email" id="basic-icon-default-email" class="form-control" placeholder="john.doe" aria-label="john.doe" aria-describedby="basic-icon-default-email2">
+              <span id="basic-icon-default-email2" class="input-group-text">@example.com</span>
+            </div>
+
+          </div>
+  
+          <div class="mb-3">
+            <label class="form-label" for="basic-icon-default-phone">password</label>
+            <div class="input-group input-group-merge">
+              <span id="basic-icon-default-phone2" class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-lock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"></path>
+                <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
+                <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
+             </svg></span>
+             <input formControlName="password"  [type]="changetypee?'password':'text'" type="password" id="basic-icon-default-phone" class="form-control phone-mask" placeholder="*******" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2">
+             <span (click)="viewpasss()" class="input-group-text cursor-pointer"><i style="font-size: 17px;"[ngClass]="visiblee?'ti ti-eye-off':'ti ti-eye'"></i></span>
+           </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="basic-icon-default-phone">Ppassword_confirmation</label>
+            <div class="input-group input-group-merge">
+              <span id="basic-icon-default-phone2" class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-lock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"></path>
+                <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
+                <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
+             </svg></span>
+              <input formControlName="password_confirmation"   [type]="changetype?'password':'text'" type="password" id="basic-icon-default-phone" class="form-control phone-mask" placeholder="*******" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2">
+              <span (click)="viewpass()" class="input-group-text cursor-pointer"><i style="font-size: 17px;"[ngClass]="visible?'ti ti-eye-off':'ti ti-eye'"></i></span>
+
+            </div>
+          </div>
+          <div class="mt-2 mb-3">
+            <label for="largeSelect" class="form-label">Select Role </label>
+            <select formControlName="role" id="largeSelect" class="form-select form-select-lg">
+          
+          <option *ngFor="let item of roles" [value]="item.id">{{item.name}}</option>
+            </select>
+          </div>
+            <div class="col-sm-12">
+                <button *ngIf="!data" (click)="addUsers()" [disabled]="formUser.invalid || (formUser.value.password!==formUser.value.password_confirmation)" type="submit"
+                    class="btn btn-success waves-effect waves-light">Add</button>
+                    <button *ngIf="data" (click)="update()" type="submit"
+                    class="btn btn-primary waves-effect waves-light">Update</button>
+                <button style="    margin-left: 12px; " (click)="close()" type="reset" class="btn btn-outline-secondary waves-effect"
+                    >Cancel</button>
+            </div>
+      </div>
+    </div>
+  </div>
