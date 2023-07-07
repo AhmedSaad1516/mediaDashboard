@@ -45,8 +45,8 @@ export class AddrolesComponent {
   openForm(){
        
     const dialogRef = this.dialog.open(AddroleComponent, {
-     width:'750px',
-     height:'60%',
+     width:'400px',
+     height:'400px',
      disableClose : true
        });
    
@@ -57,24 +57,6 @@ export class AddrolesComponent {
        });
       }
   
-  
-      updateinterestss(element:any){
-       
-    const dialogRef = this.dialog.open(AddroleComponent, {
-     width:'750px',
-     height:'60%',
-     disableClose : true,
-     data:element
-       });
-   
-       dialogRef.afterClosed().subscribe(result => {
-         if (result == true){
-          this.getAllRoles()
-         }
-       });
-      }
-     
-
   
   deleteRoles(id:any){
     this.img=true

@@ -45,8 +45,8 @@ export class TermsAndConditionsComponent {
   openForm(){
        
     const dialogRef = this.dialog.open(AddtermsAndConditionsComponent, {
-     width:'750px',
-     height:'60%',
+     width:'600px',
+     height:'400px',
      disableClose : true
        });
    
@@ -62,8 +62,8 @@ export class TermsAndConditionsComponent {
       updateTermsAndConditions(element:any){
        
     const dialogRef = this.dialog.open(AddtermsAndConditionsComponent, {
-     width:'750px',
-     height:'60%',
+      width:'600px',
+      height:'400px',
      disableClose : true,
      data:element
        });

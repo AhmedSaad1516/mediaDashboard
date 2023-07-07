@@ -47,8 +47,8 @@ export class PolicyAndPrivacyComponent {
   openForm(){
        
     const dialogRef = this.dialog.open(AddpolicyAndPrivacyComponent, {
-     width:'750px',
-     height:'60%',
+      width:'600px',
+      height:'400px',
      disableClose : true
        });
    
@@ -64,8 +64,8 @@ export class PolicyAndPrivacyComponent {
       updatepolicyAndPrivacy(element:any){
        
     const dialogRef = this.dialog.open(AddpolicyAndPrivacyComponent, {
-     width:'750px',
-     height:'60%',
+      width:'600px',
+      height:'400px',
      disableClose : true,
      data:element
        });

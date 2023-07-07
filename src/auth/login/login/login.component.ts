@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
 import { formatDate } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
+import { NgToastService } from 'ng-angular-popup';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,7 +18,7 @@ export class LoginComponent {
   visible:boolean = true;
   changetype:boolean =true;
   constructor(private fb :FormBuilder,private serv:LoginService,private rouer:Router,
-    private toaster :ToastrService
+    private toaster :ToastrService,    private toast: NgToastService
     ) { } 
 
       ngOnInit(): void {
@@ -45,6 +47,8 @@ export class LoginComponent {
       timeOut:4000,
       closeButton:true
     })
+    this.toast.success({detail:"SUCCESS",summary:'data', duration:5000});
+
     this.img=false
   }, error =>{
     this.showError=true

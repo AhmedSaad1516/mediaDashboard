@@ -1,0 +1,28 @@
+<div *ngIf="img" class="preloader">
+    <div class="preloader-inner">
+    <div class="preloader-icon">
+    <span></span>
+    <span></span>
+    </div>
+    </div>
+    </div>
+  <div class="col-md-12">
+      <div style="    height: 280px;" class="card mb-4">
+        <h5 *ngIf="data"  class="card-header">Update  Costs</h5>
+        <div [formGroup]="formCosts" class="card-body">
+          <div class="mb-3">
+              <label class="form-label" for="basic-icon-default-fullname">Cost</label>
+              <div class="input-group input-group-merge">
+                <span id="basic-icon-default-fullname2" class="input-group-text"><i class="ti ti-user"></i></span>
+                <input formControlName="cost" type="text" class="form-control" id="basic-icon-default-fullname" placeholder="John Doe" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2">
+              </div>
+            </div>
+            <div class="col-sm-12">
+                    <button *ngIf="data" (click)="update()" [disabled]="formCosts.invalid" type="submit"
+                    class="btn btn-primary waves-effect waves-light">Update</button>
+                <button style="    margin-left: 12px; " (click)="close()" type="reset" class="btn btn-outline-secondary waves-effect"
+                    >Cancel</button>
+            </div>
+        </div>
+      </div>
+    </div>

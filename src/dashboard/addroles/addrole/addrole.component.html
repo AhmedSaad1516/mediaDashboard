@@ -1,5 +1,5 @@
 <div class="col-md-12">
-    <div style="    height: 449px;" class="card mb-4">
+    <div style="    height:400px;" class="card mb-4">
       <h5 *ngIf="!data" class="card-header">Add New Role</h5>
       <h5 *ngIf="data"  class="card-header">Update  Role</h5>
       <div *ngIf="showError" class="alert alert-danger d-flex align-items-center" role="alert">
@@ -14,7 +14,10 @@
             <div class="input-group input-group-merge">
               <span id="basic-icon-default-fullname2" class="input-group-text"><i class="ti ti-user"></i></span>
               <input formControlName="name" type="text" class="form-control" id="basic-icon-default-fullname" placeholder="Enter Name" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2">
+
             </div>
+            <small class="text-danger" *ngIf="formUser.get('name')?.touched && formUser.get('name')?.invalid"> The Role Name Is Required !</small>
+
           </div>
    
  
@@ -24,13 +27,19 @@
             <ng-option  *ngFor="let item of permissions" [value]="item.id">{{item.name}}</ng-option>
            
         </ng-select>
+        <small class="text-danger" *ngIf="formUser.get('permission')?.touched && formUser.get('permission')?.invalid"> The Role Is Required !</small>
+
         </div>
 
 
             <div style="    margin-top: 18px;            " class="col-sm-12">
-                <button *ngIf="!data" (click)="addRole()" type="submit"
+                <button *ngIf="!data" (click)="addRole()" 
+                [disabled]="formUser.invalid"
+                type="submit"
                     class="btn btn-success waves-effect waves-light">Add</button>
-                    <button *ngIf="data" (click)="update()" type="submit"
+                    <button *ngIf="data" (click)="update()" 
+                    [disabled]="formUser.invalid"
+                    type="submit"
                     class="btn btn-primary waves-effect waves-light">Update</button>
                 <button style="    margin-left: 12px; " (click)="close()" type="reset" class="btn btn-outline-secondary waves-effect"
                     >Cancel</button>

@@ -63,9 +63,10 @@ audio.src='../../../assets/notification-sound/login.wav'
 audio.load()
 audio.play()
 this.show=false
-this.img=false
+
 this.formUser.reset()
 this.dialog.close(true)
+this.img=false
 },error =>{
   this.showError=true
   this.img=false

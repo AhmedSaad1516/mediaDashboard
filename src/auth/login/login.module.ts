@@ -6,6 +6,8 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { NgToastModule } from 'ng-angular-popup';
+
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { ToastrModule } from 'ngx-toastr';
     FormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
+    NgToastModule
   ]
 })
 export class LoginModule { }

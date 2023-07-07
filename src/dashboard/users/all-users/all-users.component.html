@@ -93,7 +93,7 @@
                                         </td>
 
                                         <td>
-                                                  <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#modalToggle">
+                                                  <button (click)="openDelete(item.id)" type="button" class="btn btn-danger waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#modalToggle">
                                                  Delete
                                                   </button>
                                                   <div class="modal fade" id="modalToggle" aria-labelledby="modalToggleLabel" tabindex="-1" style="display: none;" aria-hidden="true">

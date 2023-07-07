@@ -24,7 +24,7 @@ export class AllUsersComponent {
   dtOptions: DataTables.Settings = {};
 filter:any=[]
   dtTrigger:Subject<any>=new Subject<any>();
-  
+  id:any
   constructor(
    private serv:UsersService,
     private toaster:ToastrService,public dialog: MatDialog
@@ -69,8 +69,9 @@ filter:any=[]
    
        dialogRef.afterClosed().subscribe(result => {
          if (result == true){
+          this.getUsers()
           this.ngOnDestroy()
-           this.getUsers()
+
            } 
        });
       }
@@ -93,12 +94,14 @@ filter:any=[]
        });
       }
      
-
+  openDelete(id:any){
+this.id=id
+  }
   
   deleteInterest(id:any){
     this.img=true
-  this.serv.deleteUsers(id).subscribe((data:any)=>{
-    this.toaster.success('Interests deleted successfully','',{
+  this.serv.deleteUsers(this.id).subscribe((data:any)=>{
+    this.toaster.success('Employee deleted successfully','',{
       timeOut:2000,
       progressBar:true,
       closeButton:true

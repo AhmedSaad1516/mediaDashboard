@@ -33,8 +33,8 @@ this.createFormEdit()
 }
 createFormEdit(){
   this.formEdit=this.fb.group({
-    name:[this.data?.name || ''],
-    photo:[this.data?.photo || ''],
+    name:[this.data?.name || '',Validators.required],
+    photo:[this.data?.photo || '',Validators.required],
    
   })
  }

@@ -62,7 +62,9 @@
                                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                     rowspan="1" colspan="1" style="width: 107px;"
                                                     aria-label="Date: activate to sort column ascending">Country </th>
-     
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                    rowspan="1" colspan="1" style="width: 107px;"
+                                                    aria-label="Date: activate to sort column ascending">Status </th>
                                                 <th class="sorting_disabled" rowspan="1" colspan="1"
                                                     style="width: 151px;" aria-label="Actions">Actions</th>
                                             </tr>
@@ -78,7 +80,9 @@
                                         <td>
                                             {{item.country}}
                                         </td>
-
+                                        <td>
+                                            <mat-slide-toggle   (click)="active(item.id)" [(ngModel)]="item.active">
+                                            </mat-slide-toggle>                                        </td>
                                         <td>
                                                   <button style=" margin-left: 5px;
                                                   font-size: 11px;

@@ -7,9 +7,9 @@
   </div>
   </div>
 <div class="col-md-12">
-    <div style="    height: 449px;" class="card mb-4">
-      <h5 *ngIf="!data" class="card-header">Add New Announcement</h5>
-      <h5 *ngIf="data"  class="card-header">Update  Announcement</h5>
+    <div style="    height: 620px;" class="card mb-4">
+      <h5 *ngIf="!data" class="card-header">Add New Employee</h5>
+      <h5 *ngIf="data"  class="card-header">Update  Employee</h5>
       <div *ngIf="showError" class="alert alert-danger d-flex align-items-center" role="alert">
         <span class="alert-icon text-danger me-2">
           <i class="ti ti-ban ti-xs"></i>
@@ -23,6 +23,8 @@
               <span id="basic-icon-default-fullname2" class="input-group-text"><i class="ti ti-user"></i></span>
               <input formControlName="name" type="text" class="form-control" id="basic-icon-default-fullname" placeholder="John Doe" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2">
             </div>
+            <small class="text-danger" *ngIf="formUser.get('name')?.touched && formUser.get('name')?.invalid"> The Full Name Is Required !</small>
+
           </div>
           <div class="mb-3">
             <label class="form-label" for="basic-icon-default-email">Email</label>
@@ -31,6 +33,8 @@
               <input formControlName="email"  type="email" id="basic-icon-default-email" class="form-control" placeholder="john.doe" aria-label="john.doe" aria-describedby="basic-icon-default-email2">
               <span id="basic-icon-default-email2" class="input-group-text">@example.com</span>
             </div>
+            <small class="text-danger" *ngIf="formUser.get('email')?.touched && formUser.get('email')?.invalid"> The Email Is Required !</small>
+
 
           </div>
   
@@ -46,6 +50,8 @@
              <input formControlName="password"  [type]="changetypee?'password':'text'" type="password" id="basic-icon-default-phone" class="form-control phone-mask" placeholder="*******" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2">
              <span (click)="viewpasss()" class="input-group-text cursor-pointer"><i style="font-size: 17px;"[ngClass]="visiblee?'ti ti-eye-off':'ti ti-eye'"></i></span>
            </div>
+           <small class="text-danger" *ngIf="formUser.get('password')?.touched && formUser.get('password')?.invalid"> The Password Is Required !</small>
+
           </div>
           <div class="mb-3">
             <label class="form-label" for="basic-icon-default-phone">Ppassword_confirmation</label>
@@ -60,6 +66,8 @@
               <span (click)="viewpass()" class="input-group-text cursor-pointer"><i style="font-size: 17px;"[ngClass]="visible?'ti ti-eye-off':'ti ti-eye'"></i></span>
 
             </div>
+            <small class="text-danger" *ngIf="formUser.get('password_confirmation')?.touched && formUser.get('password_confirmation')?.invalid"> The password Confirmation Is Required !</small>
+
           </div>
           <div class="mt-2 mb-3">
             <label for="largeSelect" class="form-label">Select Role </label>
@@ -67,11 +75,15 @@
           
           <option *ngFor="let item of roles" [value]="item.id">{{item.name}}</option>
             </select>
+            <small class="text-danger" *ngIf="formUser.get('role')?.touched && formUser.get('role')?.invalid"> The Role Required !</small>
+
           </div>
             <div class="col-sm-12">
                 <button *ngIf="!data" (click)="addUsers()" [disabled]="formUser.invalid || (formUser.value.password!==formUser.value.password_confirmation)" type="submit"
                     class="btn btn-success waves-effect waves-light">Add</button>
-                    <button *ngIf="data" (click)="update()" type="submit"
+                    <button *ngIf="data" (click)="update()"
+                    [disabled]="formUser.invalid || (formUser.value.password!==formUser.value.password_confirmation)"
+                    type="submit"
                     class="btn btn-primary waves-effect waves-light">Update</button>
                 <button style="    margin-left: 12px; " (click)="close()" type="reset" class="btn btn-outline-secondary waves-effect"
                     >Cancel</button>

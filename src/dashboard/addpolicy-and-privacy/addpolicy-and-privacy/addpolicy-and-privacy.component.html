@@ -7,7 +7,7 @@
     </div>
     </div>
 <div class="col-md-12">
-    <div style="    height: 449px;" class="card mb-4">
+    <div style="    height: 500px;" class="card mb-4">
       <h5 *ngIf="!data" class="card-header">Add New Policy And Privacy</h5>
       <h5 *ngIf="data"  class="card-header">Update  Policy And Privacy</h5>
       <div *ngIf="showError" class="alert alert-danger d-flex align-items-center" role="alert">
@@ -20,19 +20,28 @@
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Title</label>
           <input formControlName="title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Add Title...">
+          <small class="text-danger" *ngIf="formpdatepolicyAndPrivacy.get('title')?.touched && formpdatepolicyAndPrivacy.get('title')?.invalid"> The Title Is Required !</small>
+
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Content</label>
             <textarea formControlName="content" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Add Content...">
          
             </textarea>
-        
+            <small class="text-danger" *ngIf="formpdatepolicyAndPrivacy.get('content')?.touched && formpdatepolicyAndPrivacy.get('content')?.invalid"> The Content Is Required !</small>
+
         </div>
 
             <div class="col-sm-12">
-                <button *ngIf="!data" (click)="addupdatepolicyAndPrivacy()" type="submit"
+                <button *ngIf="!data" (click)="addupdatepolicyAndPrivacy()"
+                [disabled]="formpdatepolicyAndPrivacy.invalid"
+
+                type="submit"
                     class="btn btn-success waves-effect waves-light">Add</button>
-                    <button *ngIf="data" (click)="updatepdatepolicyAndPrivacy()" type="submit"
+                    <button *ngIf="data" (click)="updatepdatepolicyAndPrivacy()"
+                    [disabled]="formpdatepolicyAndPrivacy.invalid"
+
+                    type="submit"
                     class="btn btn-primary waves-effect waves-light">Update</button>
                 <button style="    margin-left: 12px; " (click)="close()" type="reset" class="btn btn-outline-secondary waves-effect"
                     >Cancel</button>

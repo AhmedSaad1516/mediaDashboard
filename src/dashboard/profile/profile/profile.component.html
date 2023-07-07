@@ -29,7 +29,7 @@
                
             
                 </div>
-                <a style="color: white;" (click)="editProfile(data)" class="btn btn-primary waves-effect waves-light">
+                <a style="color: white;" (click)="editProfile(data)"      class="btn btn-primary waves-effect waves-light">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"></path>
@@ -122,7 +122,7 @@
                           </span>
                           <input formControlName="current_password"  [type]="changetype?'password':'text'" type="password" id="basic-icon-default-phone" class="form-control phone-mask" placeholder="*******" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2">
                           <span (click)="viewpass()" class="input-group-text cursor-pointer"><i style="font-size: 17px;"[ngClass]="visible?'ti ti-eye-off':'ti ti-eye'"></i></span>                        </div>
-                          <small class="text-danger" *ngIf="changePasswordForm.get('current_password')?.touched && changePasswordForm.get('current_password')?.invalid"> The Passeord Is Required !</small>
+                          <small class="text-danger" *ngIf="changePasswordForm.get('current_password')?.touched && changePasswordForm.get('current_password')?.invalid"> The Password Is Required !</small>
 
                         </div>
                   </div>
@@ -144,7 +144,7 @@
                             <span _ngcontent-ghj-c89="" id="basic-icon-default-phone2" class="input-group-text"><svg _ngcontent-ghj-c89="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-lock"><path _ngcontent-ghj-c89="" stroke="none" d="M0 0h24v24H0z" fill="none"></path><path _ngcontent-ghj-c89="" d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"></path><path _ngcontent-ghj-c89="" d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path><path _ngcontent-ghj-c89="" d="M8 11v-4a4 4 0 1 1 8 0v4"></path></svg></span>                          </span>
                           <input formControlName="new_password"  [type]="changetypee?'password':'text'" type="password" id="basic-icon-default-phone" class="form-control phone-mask" placeholder="*******" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2">
                           <span (click)="viewpasss()" class="input-group-text cursor-pointer"><i style="font-size: 17px;"[ngClass]="visiblee?'ti ti-eye-off':'ti ti-eye'"></i></span> </div>
-                          <small class="text-danger" *ngIf="changePasswordForm.get('new_password')?.touched && changePasswordForm.get('new_password')?.invalid"> The Passeord Is Required !</small>
+                          <small class="text-danger" *ngIf="changePasswordForm.get('new_password')?.touched && changePasswordForm.get('new_password')?.invalid"> The Password Is Required !</small>
                       
                         
                        
@@ -167,7 +167,7 @@
                             <span _ngcontent-ghj-c89="" id="basic-icon-default-phone2" class="input-group-text"><svg _ngcontent-ghj-c89="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-lock"><path _ngcontent-ghj-c89="" stroke="none" d="M0 0h24v24H0z" fill="none"></path><path _ngcontent-ghj-c89="" d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"></path><path _ngcontent-ghj-c89="" d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path><path _ngcontent-ghj-c89="" d="M8 11v-4a4 4 0 1 1 8 0v4"></path></svg></span>                          </span>
                           <input formControlName="new_password_confirmation"  [type]="changetypeee?'password':'text'" type="password" id="basic-icon-default-phone" class="form-control phone-mask" placeholder="*******" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2">
                           <span (click)="viewpassss()" class="input-group-text cursor-pointer"><i style="font-size: 17px;"[ngClass]="visibleee?'ti ti-eye-off':'ti ti-eye'"></i></span>                        </div>
-                            <small class="text-danger" *ngIf="changePasswordForm.get('new_password_confirmation')?.touched && changePasswordForm.get('new_password_confirmation')?.invalid"> The Passeord Is Required !</small>
+                            <small class="text-danger" *ngIf="changePasswordForm.get('new_password_confirmation')?.touched && changePasswordForm.get('new_password_confirmation')?.invalid"> The Password Is Required !</small>
                       
                         </div>
                   </div>

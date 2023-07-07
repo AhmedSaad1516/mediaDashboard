@@ -41,7 +41,7 @@ this.getDetalisUsers()
   getDetalisUsers(){
     this.serv.showDetalisUserApplication(this.id).subscribe(
       (data:any) =>{
-        if(data.data.groups==0){
+        if(data.data.reels==0){
           this.show=true
         }else{
           this.reel=data.data.reels

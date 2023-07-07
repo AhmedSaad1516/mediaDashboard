@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NgToastModule } from 'ng-angular-popup' // to be added
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    NgToastModule
   ]
 })
 export class DashboardModule { }

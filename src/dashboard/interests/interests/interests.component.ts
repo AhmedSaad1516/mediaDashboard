@@ -45,8 +45,8 @@ this.getAllInterests()
 openForm(){
      
   const dialogRef = this.dialog.open(AddinterestsComponent, {
-   width:'750px',
-   height:'60%',
+   width:'400px',
+   height:'400px',
    disableClose : true
      });
  
@@ -62,8 +62,8 @@ openForm(){
     updateinterestss(element:any){
      
   const dialogRef = this.dialog.open(AddinterestsComponent, {
-   width:'750px',
-   height:'60%',
+   width:'500px',
+   height:'450px',
    disableClose : true,
    data:element
      });

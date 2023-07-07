@@ -28,4 +28,9 @@ export class UsersapplicationService {
   deleteGroups(id:any){
     return this.http.delete('https://socialmedia.erp-everest.com/api/admin/delete-group/'+id)
   }
+
+  getStatus(id:any){
+    return this.http.get('https://socialmedia.erp-everest.com/api/admin/active/'+id)
+
+  }
 }

@@ -131,7 +131,11 @@
                                                 <td>
                                                     {{item.updated_at}}
                                                 </td>
-                                              
+                                                <td>
+                                                    <iframe width="420" height="345" [src]="item.video_url">
+                                                    </iframe>
+                                                
+                                                </td>
                       
                                                 <td>
                                                     <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#modalToggle">

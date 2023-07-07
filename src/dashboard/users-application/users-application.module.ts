@@ -5,6 +5,8 @@ import { UsersApplicationRoutingModule } from './users-application-routing.modul
 import { UsersapplicationComponent } from './usersapplication/usersapplication.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DataTablesModule } from "angular-datatables";
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { DataTablesModule } from "angular-datatables";
     CommonModule,
     UsersApplicationRoutingModule,
     MatDialogModule,
-    DataTablesModule
+    DataTablesModule,
+    MatSlideToggleModule,
+    FormsModule
   ]
 })
 export class UsersApplicationModule { }

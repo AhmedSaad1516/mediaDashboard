@@ -118,5 +118,18 @@ filter:any=[]
   })
   }
   
- 
+  active(id:number){
+    this.serv.getStatus(id).subscribe((data:any)=>{
+  this.toaster.success('Status changed successfully','',{
+    timeOut:1000,
+    progressBar:true,
+    closeButton:true
+  })
+  let audio = new Audio
+  audio.src='../../../assets/notification-sound/login.wav'
+  audio.load()
+  audio.play()
+  this.getUsers()
+})
+   }
 }

@@ -50,6 +50,25 @@ const routes: Routes = [
  {path:'detalis-reels/:id',
  loadChildren: () =>import('../dashboard/showreelsuser/showreelsuser.module').then(m => m.ShowreelsuserModule)},
  
+ {path:'promotions',
+ loadChildren: () =>import('../dashboard/promotions/promotions.module').then(m => m.PromotionsModule)},
+ 
+  
+ {path:'contactUs',
+ loadChildren: () =>import('../dashboard/contact-us/contact-us.module').then(m => m.ContactUsModule)},
+ 
+ {path:'costs',
+ loadChildren: () =>import('../dashboard/costs/costs.module').then(m => m.CostsModule)},
+ 
+ {path:'detalis-promotions/:id',
+ loadChildren: () =>import('../dashboard/show-propromotions-post/show-propromotions-post.module').then(m => m.ShowPropromotionsPostModule)},
+ 
+ {path:'detalis-promotions-customer/:id',
+ loadChildren: () =>import('../dashboard/show-propromotioncustomer/show-propromotioncustomer.module').then(m => m.ShowPropromotioncustomerModule)},
+ 
+ 
+ 
+ 
  
  
 

@@ -20,6 +20,8 @@
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Name</label>
           <input formControlName="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Add Name...">
+          <small class="text-danger" *ngIf="formEdit.get('name')?.touched && formEdit.get('name')?.invalid"> The Name Is Required !</small>
+
         </div>
         <div class="mb-3">
             <label  *ngIf="data" for="selected" type="button" class="btn btn-primaryl" > Change Photo</label>
@@ -31,12 +33,15 @@
                 <img class="myu" [src]="url? url:formEdit.value.photo" alt="">
               </div>
                         <input type="file" (change)="selectPhoto($event)" id="selected" hidden class="form-control">
+                        <small class="text-danger" *ngIf="formEdit.get('photo')?.touched && formEdit.get('photo')?.invalid"> The Photo Is Required !</small>
 
             </div>
 
             <div class="col-sm-12">
        
-                    <button (click)="updateDataProfile()" type="submit"
+                    <button (click)="updateDataProfile()" 
+                    [disabled]="formEdit.invalid"
+                    type="submit"
                     class="btn btn-primary waves-effect waves-light">Update</button>
                 <button style="    margin-left: 12px; " (click)="close()" type="reset" class="btn btn-outline-secondary waves-effect"
                     >Cancel</button>

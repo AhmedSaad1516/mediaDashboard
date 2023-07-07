@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { ToastrModule } from 'ngx-toastr';
+import { NgToastModule } from 'ng-angular-popup';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { ToastrModule } from 'ngx-toastr';
     CommonModule,
     AuthRoutingModule,
     ToastrModule.forRoot(),
+    NgToastModule
   ]
 })
 export class AuthModule { }

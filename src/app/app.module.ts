@@ -16,6 +16,8 @@ import { AddtermsAndConditionsModule } from 'src/dashboard/addterms-and-conditio
 import { AddpolicyAndPrivacyModule } from 'src/dashboard/addpolicy-and-privacy/addpolicy-and-privacy.module';
 import { AddrolesModule } from 'src/dashboard/addroles/addroles.module';
 import { DataTablesModule } from "angular-datatables";
+import { UpdateCostsModule } from 'src/dashboard/update-costs/update-costs.module';
+import {NgToastModule} from 'ng-angular-popup';
 
  
 @NgModule({
@@ -38,7 +40,9 @@ import { DataTablesModule } from "angular-datatables";
     AddtermsAndConditionsModule,
     AddpolicyAndPrivacyModule,
     AddrolesModule,
-    DataTablesModule
+    DataTablesModule,
+    UpdateCostsModule,
+    NgToastModule 
 
   ],
   providers: [],
